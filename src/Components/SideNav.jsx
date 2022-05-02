@@ -14,16 +14,13 @@ import {
   SiGithub,
 } from "react-icons/si";
 
-import {AiOutlineHome} from "react-icons/ai"
+import { AiOutlineHome } from "react-icons/ai";
 
 import { CgProfile } from "react-icons/cg";
-import {AiOutlineFundProjectionScreen} from "react-icons/ai"
-import {GrDocumentUser} from "react-icons/gr"
-import { AiFillGithub } from "react-icons/ai"
-import {GrServices} from "react-icons/gr"
-
-
-
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { GrDocumentUser } from "react-icons/gr";
+import { AiFillGithub } from "react-icons/ai";
+import { GrServices } from "react-icons/gr";
 
 const Container = styled.div`
   display: flex;
@@ -32,69 +29,56 @@ const Container = styled.div`
   padding-right: 10px;
   background-color: antiquewhite;
   border: 2px solid black;
-		border-radius: 5px;
+  border-radius: 5px;
 `;
 const ToggleOn = styled.div`
   display: flex;
   width: 250px;
   height: calc(100vh - 56px);
   flex-direction: column;
-
 `;
 
 const ImageContainer = styled.div`
-display: flex;
-justify-content: center;
-margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
 
-`
+const Image = styled.img`
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+`;
 
-const Image=styled.img`
-	
-	width:160px;
-	height: 160px;
-	border-radius: 50%;
-`
-
-const SocialMediaContiner=styled.div`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-top: 15px;
-
-
-`
+const SocialMediaContiner = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 15px;
+`;
 
 const RouteButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-
 `;
 
 const RouterButtonContainer = styled.div`
-
   display: flex;
-  margin-top:10px;
+  margin-top: 10px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   border-radius: 4px;
   /* border:black 2px solid; */
-  
-
 `;
 
 const RouterIcon = styled.div`
-margin-right:10px;
-margin-left: 0px;
-  
-
-`
-
+  margin-right: 10px;
+  margin-left: 0px;
+`;
 
 const RouterHeading = styled.div`
   font-size: 35px;
@@ -104,10 +88,6 @@ const RouterHeading = styled.div`
   /* text-decoration: none; */
 `;
 
-
-	
-
-
 const ToggleOff = styled.div`
   display: flex;
   width: 80px;
@@ -116,7 +96,6 @@ const ToggleOff = styled.div`
 
   /* background-color: blue; */
 `;
-
 
 const RouterButtonContainer2 = styled.div`
   display: flex;
@@ -139,11 +118,9 @@ const RouterHeading2 = styled.div`
 `;
 
 const RouterIcon2 = styled.div`
-  margin-right: 10px;
-  margin-left: 0px;
+  display: flex;
+  justify-content: center;
 `;
-
-
 
 const SideNav = () => {
   const [toggle, setToggle] = useState(true);
