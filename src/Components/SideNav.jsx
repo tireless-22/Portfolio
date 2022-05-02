@@ -52,7 +52,7 @@ margin-top: 10px;
 const Image=styled.img`
 	
 	width:160px;
-	height: 180px;
+	height: 160px;
 	border-radius: 50%;
 `
 
@@ -100,6 +100,8 @@ const RouterHeading = styled.div`
   font-size: 35px;
   color: black;
   text-decoration: none;
+
+  /* text-decoration: none; */
 `;
 
 
@@ -114,6 +116,34 @@ const ToggleOff = styled.div`
 
   /* background-color: blue; */
 `;
+
+
+const RouterButtonContainer2 = styled.div`
+  display: flex;
+  margin-top: 35px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+
+  /* border:black 2px solid; */
+`;
+
+const RouterHeading2 = styled.div`
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+
+  /* text-decoration: none; */
+`;
+
+const RouterIcon2 = styled.div`
+  margin-right: 10px;
+  margin-left: 0px;
+`;
+
+
 
 const SideNav = () => {
   const [toggle, setToggle] = useState(true);
@@ -207,7 +237,56 @@ const SideNav = () => {
           </RouteButtonsContainer>
         </ToggleOn>
       ) : (
-        <ToggleOff></ToggleOff>
+        <ToggleOff>
+          <Link to="/">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <AiOutlineHome color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2>Home</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+          <Link to="aboutMe">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <CgProfile color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2> About Me</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+          <Link to="projects">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <AiOutlineFundProjectionScreen color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2>Projects</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+          <Link to="resume">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <GrDocumentUser color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2>Resume</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+          <Link to="github">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <AiFillGithub color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2>GitHub</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+          <Link to="services">
+            <RouterButtonContainer2>
+              <RouterIcon2>
+                <GrServices color="black" size="40px" />
+              </RouterIcon2>
+              <RouterHeading2>Services</RouterHeading2>
+            </RouterButtonContainer2>
+          </Link>
+        </ToggleOff>
       )}
     </Container>
   );
