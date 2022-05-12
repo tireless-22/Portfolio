@@ -30,16 +30,18 @@ const Container = styled.div`
   background-color: antiquewhite;
   border: 2px solid black;
   border-radius: 5px;
+  position: static;
 `;
 const ToggleOn = styled.div`
   display: flex;
   width: 250px;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 70px);
   flex-direction: column;
 `;
 
 const ImageContainer = styled.div`
   display: flex;
+  
   justify-content: center;
   margin-top: 10px;
 `;

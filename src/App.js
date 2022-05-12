@@ -23,7 +23,7 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: calc(100vw - 120px);
-  background-color: red;
+  /* background-color: red; */
 `;
 
 

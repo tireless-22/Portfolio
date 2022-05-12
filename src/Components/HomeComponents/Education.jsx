@@ -3,26 +3,35 @@ import styled from 'styled-components'
 import logo1 from "../../Images/Home/gpve_logo.jpg"
 import logo2 from "../../Images/Home/tirumala_logo.png"
 
-const Container=styled.div`
-	
-`
-const Main=styled.div`
-	
+const Container = styled.div`
+position: relative;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-bottom: 10px;
 
 `
+const Main = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width:800px;
+  margin-left: 0px;
+  margin-right:0px;
+  margin:auto;
+  margin-top:10px;
+  padding:10px;
+`;
+
 
 const ImageContainer = styled.div`
+  margin-left: 0px;
+  margin-right: 0px;
+  margin: auto;
+`;
 
 
-`
-
-
-const Image=styled.img`
+const Image = styled.img`
 	
 	width:150px;
 	height: 150px;
@@ -31,6 +40,10 @@ const Image=styled.img`
 
 const ContentContainer=styled.div`
 	background-color: white;
+  border-width: 0px 0px 0px 3px;
+  border-color: black;
+  border-style: solid;
+  padding-left:15px;
 
 `
 const HeadingType1 = styled.p`
