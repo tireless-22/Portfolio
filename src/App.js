@@ -8,6 +8,7 @@ import Github from "./Pages/Github"
 import Services from "./Pages/Services"
 import Projects from "./Pages/Projects"
 import "./App.css"
+import { useState } from "react";
 
 
 const AppLayout = styled.div`
@@ -21,8 +22,12 @@ justify-content: space-between;
 
 const MainContainer = styled.div`
   display: flex;
+
   flex-direction: column;
-  width: calc(100vw - 120px);
+  /* width:100%; */
+  /* margin-left: 275px; */
+  margin-left: ${(props) => (props.toggle ? "275px": "102px")};
+  width: calc(100vw);
   /* background-color: red; */
 `;
 
@@ -30,12 +35,22 @@ const MainContainer = styled.div`
 
 
 function App() {
+
+  const [toggle, setToggle] = useState(true);
+	const changeState = () => {
+		setToggle(!toggle)
+		// console.log(bright);
+	}
+
+
+
+
   return (
     <div className="App">
       <Router>
         <AppLayout>
-          <SideNav />
-          <MainContainer>
+          <SideNav toggle={toggle} changeState={changeState} />
+          <MainContainer toggle={toggle}>
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="aboutMe" element={<AboutMe />}></Route>

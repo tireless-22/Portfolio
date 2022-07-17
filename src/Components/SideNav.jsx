@@ -27,10 +27,11 @@ const Container = styled.div`
   flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: antiquewhite;
+  /* background-color: #ffda94.; */
   border: 2px solid black;
   border-radius: 5px;
-  position: static;
+  position: fixed;
+  height: 100vh;
 `;
 const ToggleOn = styled.div`
   display: flex;
@@ -124,15 +125,17 @@ const RouterIcon2 = styled.div`
   justify-content: center;
 `;
 
-const SideNav = () => {
-  const [toggle, setToggle] = useState(true);
+const SideNav = ({toggle,changeState}) => {
+  // const [toggle, setToggle] = useState(true);
+  console.log(toggle);
+
 
   return (
     <Container>
       {toggle ? (
-        <AiOutlineMenuFold size="40px" onClick={() => setToggle(!toggle)} />
+        <AiOutlineMenuFold size="40px" onClick={() => changeState()} />
       ) : (
-        <AiOutlineMenuUnfold size="40px" onClick={() => setToggle(!toggle)} />
+        <AiOutlineMenuUnfold size="40px" onClick={() => changeState()} />
       )}
 
       {toggle ? (
